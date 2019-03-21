@@ -29,3 +29,7 @@ console.log(e.currentTarget.dataset['item']); // 点击的列名
 },
 
 ```
+
+# About
+一个小程序新手
+请多多关照~
