@@ -83,7 +83,6 @@ Component({
     contentProperties: [],
     columnMaxWidthDict: {},
     columnMaxWidths: [],
-
   },
   /**
    * 组件的方法列表
@@ -91,42 +90,14 @@ Component({
   methods: {
     didClickSection: function (e) {
       // console.log(e);
-      console.log(e.currentTarget.dataset['section']);
+      var section = e.currentTarget.dataset['section'];
+      console.log(section);
       console.log(e.currentTarget.dataset['item']);
-    },
+      console.log(this.properties.bodyDatas[section]);
 
-    /* 加数 */
-    addCount: function (e) {
-            console.log(e);
-
-      var index = e.target.dataset.index;
-      console.log("刚刚您点击了加+");
-      var count = this.data.items[index].count;
-      // 商品总数量+1  
-      if (count < 10) {
-        this.data.items[index].count++;
-      }
-      // 将数值与状态写回  
-      this.setData({
-        items: this.data.items
-      });
-      console.log("items:" + this.data.items);
     },
-    /* 减数 */
-    delCount: function (e) {
-             console.log(e);
-      var index = e.target.dataset.index;
-      console.log("刚刚您点击了加一");
-      var count = this.data.items[index].count;
-      // 商品总数量-1
-      if (count > 1) {
-        this.data.items[index].count--;
-      }
-      // 将数值与状态写回  
-      this.setData({
-        items: this.data.items
-      });
-      console.log("items:" + this.data.items);
+    onMyEvent: function (e){
+      this.properties.bodyDatas[e.detail.index].qty = e.detail.count;
     },
     // private Method
     // 计算所有列宽

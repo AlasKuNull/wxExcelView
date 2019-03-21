@@ -1,6 +1,4 @@
 <!--component/excelView.wxml-->
-<import src="../../template/countTemp.wxml" />
-
 <wxs module="filter" src="excelView.wxs"></wxs>
 <view>
   <view class='top-view' style='background-color:{{headBackgroundColor}}'>
@@ -38,7 +36,7 @@
         <view class='left-text' wx:key='unique' wx:for="{{bodyDatas[section]}}" wx:for-index='key' wx:if="{{key != 'code'}}" wx:for-item="value" style="width:{{columnMaxWidthDict[key]}}px;" bindtap='didClickSection'  data-section='{{section}}' data-item='{{key}}'>
           <view class='containerT' style="height:{{bodyLineHeight}}px;">
             <text class='contentText' wx:if="{{(key == 'qty' && !showOption) || key != 'qty'}}">{{value}}</text>
-            <template is="quantity" data="{{ ...value,key:key}}" wx:if="{{key == 'qty' && showOption}}" />
+            <countTemp count="{{value}}" wx:if="{{key == 'qty' && showOption}}" bind:myEvent='onMyEvent' index="{{section}}"></countTemp>
           </view>
         </view>
       </view>
