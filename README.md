@@ -1,9 +1,10 @@
 # wxExcelView
 微信小程序  excel  表格 
+
 ![示例](https://github.com/AlasKuNull/wxExcelView/blob/master/10.gif)
 
 # 属性
-``
+```
 headTitles // 表头
 modelProperties // model 属性
 bodyDatas  // 内容
@@ -18,7 +19,7 @@ maxColumWidth  // 列最大宽度
 minColumWidth // 列最小宽度
 viewHeight   // 组件高度
 contentMargin // 内容间隙
-``
+```
 # 方法(Method)
 ```
    // 点击事件
@@ -27,4 +28,4 @@ console.log(e.currentTarget.dataset['section']); // 点击的行
 console.log(e.currentTarget.dataset['item']); // 点击的列名
 },
 
-``
+```
