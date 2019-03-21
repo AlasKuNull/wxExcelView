@@ -14,6 +14,7 @@ Page({
      '8':120
     },
     viewHeight:400,
+    showOption:true
   },
 
   //事件处理函数
