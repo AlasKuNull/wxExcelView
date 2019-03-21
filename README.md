@@ -1,6 +1,6 @@
 # wxExcelView
 微信小程序  excel  表格 
-![示例](图片链接 )
+![示例](https://github.com/AlasKuNull/wxExcelView/blob/master/10.gif)
 
 # 属性
 ``
