@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class='excelView'>
+  <excelView headTitles = '{{headTitles}}' modelProperties='{{modelProperties}}' bodyDatas='{{bodyDatas}}' viewHeight='{{viewHeight}}' maxColumWidth='{{maxWidth}}' contentMargin='10'>
+  </excelView>
+</view>

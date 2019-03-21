@@ -1,0 +1,22 @@
+var filter = {
+  textToLines: function (text,maxWidth) {
+    var lastStr = text
+    var count = parseInt(maxWidth / 8);
+    var realLength = 0, len = text.length, charCode = -1;
+    var lastI = 0;
+    for (var i = 0; i < len; i++) {
+      charCode = text.charCodeAt(i);
+      if (charCode >= 0 && charCode <= 128) realLength += 1;
+      else realLength += 2;
+
+      if ((realLength == count || realLength == count - 1 || realLength == count * 2 - 1 || realLength == count * 2) && (lastI != i - 1 && lastI != i - 2)) {
+        lastI = i;
+        lastStr = lastStr.slice(0, i) + '\n' + lastStr.slice(i);
+      }
+    }
+    return lastStr;
+    }
+}
+module.exports = {
+  textToLines: filter.textToLines
+}

@@ -1,0 +1,81 @@
+/**index.wxss**/
+/* .contentText {
+  line-height: 200rpx;
+} */
+.excelView {
+  font-size: 13px;
+}
+
+.top-view {
+  display: flex;
+  background-color: lightgray;
+  /* height: 30rpx; */
+  /* flex-direction: row; */
+}
+
+.left-text {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow:hidden; 
+  white-space:normal !important;
+}
+
+.containerT {
+  height: 100rpx;
+  width: 100%;
+  text-align: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  word-break: keep-all;
+  word-wrap: break-word;
+  font-size: 13px;
+}
+
+.top-right-view {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.top-right-view .head-view {
+  /* width: 25%; */
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bottom-view {
+  display: flex;
+}
+
+.left-frezze-view {
+  /* width: 20%; */
+  /* background-color: lightgray; */
+  height: 600rpx;
+  /* padding-bottom: 10rpx; */
+}
+
+.left-frezze-view-item {
+  /* height: 100rpx; */
+  display: inline-block;
+  /* background: lightcyan; */
+  padding-bottom: 10rpx;
+  /* padding-left: 40rpx; */
+}
+
+.slide-content-section {
+  /* background: lightblue; */
+  display: inline-block;
+  text-align: center;
+  /* height: 84rpx; */
+  white-space: nowrap;
+
+}
+
+.y-scroll-view {
+  /* background-color: lightcoral; */
+  /* width: 568rpx; */
+  height: 600rpx;
+}

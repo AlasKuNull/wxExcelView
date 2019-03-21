@@ -1,0 +1,60 @@
+/* component/excelView.wxss */
+.top-view {
+  display: flex;
+  /* background-color: lightgray; */
+}
+
+.left-text {
+  display: inline-block;
+  overflow:hidden; 
+  white-space:normal !important;
+}
+
+.containerT {
+  width: 100%;
+  text-align: center;
+  word-break: keep-all;
+  word-wrap: break-word;
+  font-size: 13px;
+
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.top-right-view {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.top-right-view .head-view {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.bottom-view {
+  display: flex;
+}
+
+/* .left-frezze-view {
+
+} */
+
+.left-frezze-view-item {
+  display: inline-block;
+  padding-bottom: 8rpx;
+}
+
+.slide-content-section {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+
+}
+
+.y-scroll-view {
+    width: 100%;
+}

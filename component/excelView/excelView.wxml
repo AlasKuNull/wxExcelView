@@ -1,0 +1,45 @@
+<!--component/excelView.wxml-->
+<wxs module="filter" src="excelView.wxs"></wxs>
+<view>
+  <view class='top-view' style='background-color:{{headBackgroundColor}}'>
+    <view style="width:{{columnMaxWidths[0]}}px;">
+      <view style="width:{{columnMaxWidths[0]}}px;">
+        <view class='containerT' style="height:{{headLineHeight}}px;  border-color: lightgray;border-width: thin;border-right-style: solid;">
+          <text class='contentText'>{{headTitles[0]}}</text>
+        </view>
+      </view>
+    </view>
+    <scroll-view class='top-right-view' scroll-x scroll-left="{{scrollX}}" bindscroll="scrollXAxi" style="width:{{windowWidth - columnMaxWidths[0]}}px;"> 
+    
+      <view class='head-view' wx:for="{{headTitles}}" wx:for-index='idx' wx:key="unique" wx:if="{{idx != 0}}" style="width:{{columnMaxWidths[idx]}}px;">
+        <view class='containerT' style="height:{{headLineHeight}}px;">
+          <text class='contentText'>{{headTitles[idx]}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 内容视图 -->
+  <view class='bottom-view'  style='background-color:{{bodyBackgroundColor}}'>
+    <!-- 冻结栏 -->
+    <scroll-view scroll-y scroll-top="{{scrollY}}" bindscroll="scrollYAxi" style="width:{{columnMaxWidths[0]}}px;  height:{{viewHeight - headLineHeight}}px;">
+      <view class='left-frezze-view-item' wx:key='unique' wx:for="{{bodyDatas}}" style="width:{{columnMaxWidths[0]}}px; background-color:{{index % 2 ? bodyBackgroundColor : evenLineColor}}" bindtap='didClickSection'  data-section='{{index}}' data-item='code'>
+        <view class='containerT' style="height:{{bodyLineHeight}}px;">
+          <text class='contentText'>{{filter.textToLines(item.code,maxColumWidth)}}</text>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- 活动栏 -->
+    <!-- <view> -->
+    <!-- 内容scroll -->
+    <scroll-view class='y-scroll-view' scroll-y scroll-x bindscroll="scroll" scroll-y scroll-top="{{scrollY}}" scroll-x scroll-left="{{scrollX}}" style="width:{{windowWidth - columnMaxWidths[0]}}px; height:{{viewHeight - headLineHeight}}px;">
+      <view class='slide-content-section' wx:for="{{bodyDatas}}" wx:key='unique' wx:for-index='section' style="background-color:{{section % 2 ? bodyBackgroundColor : evenLineColor}}">
+        <view class='left-text' wx:key='unique' wx:for="{{bodyDatas[section]}}" wx:for-index='key' wx:if="{{key != 'code'}}" wx:for-item="value" style="width:{{columnMaxWidthDict[key]}}px;" bindtap='didClickSection'  data-section='{{section}}' data-item='{{key}}'>
+          <view class='containerT' style="height:{{bodyLineHeight}}px;">
+            <text class='contentText'>{{value}}</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- </view> -->
+  </view>
+</view>
