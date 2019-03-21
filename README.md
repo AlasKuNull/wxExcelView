@@ -8,6 +8,7 @@
 headTitles // 表头
 modelProperties // model 属性
 bodyDatas  // 内容
+widthSetting  // 指定列宽    
 headBackgroundColor  // 表头背景色
 bodyBackgroundColor // 内容背景色
 evenLineColor // 偶数行的背景色

@@ -10,6 +10,9 @@ Page({
     headTitles: ["单号", "日期", "状态", "序列号", "货号", "品名", "规格", "批号", "数量"],
     modelProperties: ["code", "date", "name", "age", "pno", "pname", "specification", "lotno", "qty"],
     bodyDatas: datas,
+    widthSetting:{
+     '8':120
+    },
     viewHeight:400,
   },
 
